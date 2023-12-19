@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-Up-In</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="../Style/Login.css" />
+  </head>
+  <body>
+    <div>
+      <h2>Weekly Coding Challenge : Sign in/up Form</h2>
+      <div class="container" id="container">
+        <div class="form-container sign-up-container">
+          <form action="#">
+            <h1>Create Account</h1>
+            <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"
+                ><i class="fab fa-google-plus-g"></i
+              ></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <div class="error_all">
+              <input
+                onkeyup="typeing()"
+                id="SignUp_Name"
+                type="text"
+                placeholder="Name"
+              />
+              <span id="isError1" class="error"></span>
+            </div>
+            <div class="error_all">
+              <input
+                onkeyup="typeing()"
+                id="SignUp_email"
+                type="email"
+                placeholder="Email"
+              />
+              <span id="isError2" class="error"></span>
+            </div>
+            <div class="error_all">
+              <input
+                onkeyup="typeing()"
+                id="SignUp_password"
+                type="password"
+                placeholder="Password"
+              />
+              <a href="#">
+                <!-- <span onclick="show_pss_sign_up()" id="show_mypss" class="material-symbols-outlined show_pss">visibility_off</span> -->
+              </a>
+              <span id="isError3" class="error"></span>
+            </div>
+            <button id="btn_SignUp">Sign Up</button>
+          </form>
+        </div>
+        <div class="form-container sign-in-container">
+          <form action="#">
+            <h1>Sign in</h1>
+            <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"
+                ><i class="fab fa-google-plus-g"></i
+              ></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
+            <div class="error_all">
+              <input
+                onkeyup="typeing()"
+                id="SignIn_email"
+                type="email"
+                placeholder="Email"
+              />
+              <span id="isError4" class="error"></span>
+            </div>
+            <div class="error_all">
+              <input
+                onkeyup="typeing()"
+                id="SignIn_password"
+                type="password"
+                placeholder="Password"
+              />
+              <a href="#">
+                <!-- <span onclick="show_pss_sign_in()" id="show_mypss" class="material-symbols-outlined show_pss">visibility_off</span> -->
+              </a>
+              <span id="isError5" class="error"></span>
+            </div>
+            <a href="#">Forgot your password?</a>
+            <button id="btn_SignIn">Sign In</button>
+            <button id="admin"><a href="admin.html">Admin</a></button>
+          </form>
+        </div>
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-left">
+              <h1>Welcome Back!</h1>
+              <p>
+                To keep connected with us please login with your personal info
+              </p>
+              <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+              <h1>Hello, Friend!</h1>
+              <p>Enter your personal details and start journey with us</p>
+              <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p>
+          Created with <i class="fa fa-heart"></i> by
+          <a target="_blank" href="https://florin-pop.com">Florin Pop</a>
+          - Read how I created this and how you can join the challenge
+          <a
+            target="_blank"
+            href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/"
+            >here</a
+          >.
+        </p>
+      </footer>
+    </div>
+
+    <script src="Loding.js"></script>
+  </body>
+</html>

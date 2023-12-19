@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../Style/admin.css" />
+  </head>
+  <body>
+    <i class="fa-solid fa-moon icon-dark" id="dark_btn"></i>
+    <style>
+      .icon-dark {
+        position: absolute;
+        left: 63px;
+        display: flex;
+        padding: 6px 9.4px;
+        opacity: 0.9;
+        font-size: 14px;
+        top: 38px;
+        z-index: 999999;
+        border-radius: 0.25rem;
+      }
+    </style>
+    <nav>
+      <div class="login">
+        <a class="btn_login" href="Login.html">Sign in</a>
+        <a class="btn_login" href="Login.html">Sign up</a>
+      </div>
+      <div class="search_section">
+        <div class="output" id="outputt">
+          <input
+            id="search"
+            type="text"
+            onkeyup="seatchData(value)"
+            placeholder="Search"
+            name="search"
+          />
+          <span class="material-symbols-outlined search">search</span>
+          <div id="listAll" class="listAll"></div>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="text">
+        <h1>cruds</h1>
+        <h3>prouct management system</h3>
+      </div>
+      <div class="input">
+        <div class="error_all">
+          <input
+            class="titel"
+            id="titel"
+            type="text"
+            placeholder="Title"
+            name="title"
+          />
+          <span id="isError1" class="error"></span>
+        </div>
+        <div class="input-flex-row">
+          <div class="error_all">
+            <input
+              onkeyup="Get_Totel()"
+              id="price"
+              type="number"
+              placeholder="Price"
+              aria-required="false"
+              name="price"
+            />
+            <span id="isError2" class="error"></span>
+          </div>
+          <div class="error_all">
+            <input
+              onkeyup="Get_Totel()"
+              id="taxes"
+              type="number"
+              placeholder="Taxes"
+              name="taxes"
+            />
+            <span id="isError3" class="error"></span>
+          </div>
+          <div class="error_all">
+            <input
+              onkeyup="Get_Totel()"
+              id="ads"
+              type="number"
+              placeholder="Ads"
+              name="ads"
+            />
+            <span id="isError4" class="error"></span>
+          </div>
+          <div class="error_all">
+            <input
+              onkeyup="Get_Totel()"
+              id="discound"
+              type="number"
+              placeholder="Discound"
+              name="discound"
+            />
+            <span id="isError5" class="error"></span>
+          </div>
+          <small id="totel"></small>
+        </div>
+        <div class="input-flex-col">
+          <div class="error_all">
+            <input
+              id="category"
+              type="text"
+              placeholder="Category"
+              name="category"
+            />
+            <span id="isError7" class="error"></span>
+          </div>
+          <div class="error_all">
+            <input id="count" type="number" placeholder="Count" name="count" />
+            <span id="isError6" class="error"></span>
+          </div>
+        </div>
+      </div>
+      <button class="btn-1" id="Create" type="submit" onsubmit="Create()">
+        Create
+      </button>
+      <!-- <button class="btn-1" id="mohamed" type="submit" onclick="mohamed()">mohamed</button> -->
+    </section>
+    <table>
+      <div id="dataDelete"></div>
+
+      <!-- ----------------------------------------------------------------- -->
+      <!-- tabble -->
+      <tr>
+        <td><input type="checkbox" id="SalectedALL" onclick="Salected()" /></td>
+        <th>ID</th>
+        <th>titel</th>
+        <th>price</th>
+        <th>taxes</th>
+        <th>ads</th>
+        <th>discound</th>
+        <th class="color_th">totel</th>
+        <th>category</th>
+        <th class="color_th">count</th>
+      </tr>
+      <!-- ----------------------------------------------------------------- -->
+      <tbody id="tbodyy"></tbody>
+    </table>
+
+    <script src="CRUD.js"></script>
+  </body>
+</html>
