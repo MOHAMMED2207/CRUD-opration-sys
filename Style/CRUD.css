@@ -7,7 +7,7 @@
 /* dark */
 :root {
   --firist-background-color: linear-gradient(
-    140deg,
+    360deg,
     #161616,
     #0a0a0a,
     #080808,
@@ -102,14 +102,13 @@ body {
   border-radius: 6px;
   background-color: var(--background__inpute_search);
   color: var(--hover-color);
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   border-bottom: 1px solid #757575;
   font-family: "Montserrat", sans-serif;
   font-family: system-ui;
   outline: none;
-  padding: 8px 39px;
-  letter-spacing: 1px;
+  padding: 6px 26px;
   text-transform: capitalize;
   transition: transform 80ms ease-in;
 }
@@ -164,7 +163,7 @@ input {
 input:focus {
   background-color: var(--backround-input-hover);
   color: var(--color-text-input);
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   transition: all.2s ease;
 }
 
@@ -242,7 +241,7 @@ nav {
 }
 
 .search_section {
-  width: 22%;
+  width: 33%;
   position: relative;
 }
 
@@ -720,4 +719,109 @@ tbody td button:hover {
   transition: all 0.4s ease;
 }
 
+.elementNumber input {
+  width: 290px;
+}
+
+/* -------------------------------------------------------------------------------- */
 /* 0f008b */
+@media only screen and (max-width: 545px) {
+  input {
+    background: var(--backround-input);
+    border: solid #22222200 1px;
+    outline: none;
+    color: var(--color-text-input);
+    padding: 11px 15px;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 12px;
+    margin: 3px 3px;
+  }
+  table button {
+    padding: 9px 0px;
+    margin: 9px 0;
+    outline: none;
+    font-size: x-small;
+    width: 100%;
+    font-weight: 600;
+    color: var(--icon-color);
+    border: 0.1px solid var(--brder-hover-btn);
+    text-transform: capitalize;
+    border-radius: 3px;
+    background: var(--hover-color);
+  }
+  tbody td {
+    color: var(--color-td);
+    border-bottom: solid 1px #3e3e3e;
+    text-transform: capitalize;
+    padding-bottom: 11px;
+    font-size: x-small;
+  }
+  th {
+    font-size: x-small;
+    text-transform: capitalize;
+    border-bottom: solid 1px #3e3e3e;
+    font-weight: 400;
+    background: #0000005c;
+    border-radius: 2px;
+    font-family: system-ui;
+  }
+  .login {
+    display: none;
+  }
+  .search_section {
+    width: 100%;
+    position: relative;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    padding: 0px 111px;
+    align-items: center;
+  }
+  .error_all {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+  }
+  .error_all input {
+    width: 85%;
+    margin: 4px auto;
+  }
+  .elementNumber input {
+    width: 85%;
+    margin: 4px auto;
+  }
+
+  small {
+    background: #0f008b;
+    color: white;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    border-radius: 7px;
+    width: 80%;
+    margin: 4px auto;
+    padding: 0 10px;
+  }
+  .btn-1 {
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    outline: none;
+    margin: 4px auto;
+    font-size: 16px;
+    color: white;
+    border: 0.1px solid var(--brder-hover-btn);
+    text-transform: capitalize;
+    border-radius: 7px;
+    background: var(--backgrond-big-btn);
+  }
+}
