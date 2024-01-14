@@ -23,14 +23,14 @@
     <style>
       .icon-dark {
         position: absolute;
-        left: 63px;
+        right: 36px;
         display: flex;
-        padding: 6px 9.4px;
-        opacity: 0.9;
-        font-size: 14px;
-        top: 38px;
+        padding: 9px 12px;
+        opacity: 1;
+        font-size: 19px;
+        top: 35px;
         z-index: 999999;
-        border-radius: 0.25rem;
+        border-radius: 1.25rem;
       }
     </style>
     <nav>
@@ -44,7 +44,7 @@
             id="search"
             type="text"
             onkeyup="seatchData(value)"
-            placeholder="Search"
+            placeholder="Search in your data "
             name="search"
           />
           <span class="material-symbols-outlined search">search</span>
@@ -69,7 +69,7 @@
           <span id="isError1" class="error"></span>
         </div>
         <div class="input-flex-row">
-          <div class="error_all">
+          <div class="error_all elementNumber">
             <input
               onkeyup="Get_Totel()"
               id="price"
@@ -80,7 +80,7 @@
             />
             <span id="isError2" class="error"></span>
           </div>
-          <div class="error_all">
+          <div class="error_all elementNumber">
             <input
               onkeyup="Get_Totel()"
               id="taxes"
@@ -90,7 +90,7 @@
             />
             <span id="isError3" class="error"></span>
           </div>
-          <div class="error_all">
+          <div class="error_all elementNumber">
             <input
               onkeyup="Get_Totel()"
               id="ads"
@@ -100,7 +100,7 @@
             />
             <span id="isError4" class="error"></span>
           </div>
-          <div class="error_all">
+          <div class="error_all elementNumber">
             <input
               onkeyup="Get_Totel()"
               id="discound"
